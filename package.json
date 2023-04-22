@@ -5,9 +5,9 @@
   "description": "vault core website",
   "main": "index.js",
   "scripts": {
-    "start": "source ./scripts/source-me.sh && ./scripts/go-compile.sh ./vault-web-server && echo && ./bin/vault-web-server",
+    "start": "bash -c 'source scripts/source-me.sh && scripts/go-compile.sh ./vault-web-server && echo && bin/vault-web-server'",
     "dev": "webpack --progress --watch",
-    "postinstall": "source ./scripts/source-me.sh && ./scripts/go-compile.sh ./vault-web-server"
+    "postinstall": "bash -c 'source scripts/source-me.sh && scripts/go-compile.sh ./vault-web-server'"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/pashpashpash/vault#readme",
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.21.4",
+    "@babel/runtime": "^7.21.0",
     "crypto-browserify": "^3.12.0",
     "https-browserify": "^1.0.0",
     "os-browserify": "0.3.0",

@@ -8,7 +8,7 @@ else
     script_name="${0}"
 fi
 dir_path="$( cd "$(dirname "$script_name")" >/dev/null 2>&1 ; pwd -P )"
-secrets_path="${dir_path}/../secret"
+secrets_path="/mnt/s/Github/_prs/vault-ai/secret"
 test ! -d $secrets_path && echo "ERR: ../secret dir missing!" && return 1
 
 export GO111MODULE=on
